@@ -13,7 +13,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url("C:/Users/shanm/OneDrive/Desktop/Shannu_portfolio/Images/Background.gif");
+    background-image: url("./Images/Background.gif");
     background-size: cover;
     background-position: center;
 }
