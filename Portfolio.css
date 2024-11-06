@@ -381,6 +381,6 @@ form btn2 {
 /*----------------------Small Screen CSS------------------------------*/
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: ;
+        background-image: #000 ;
     }
 }
