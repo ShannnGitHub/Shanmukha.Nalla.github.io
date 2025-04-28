@@ -7,139 +7,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shanmukha Nalla | Portfolio</title>
     <link rel="stylesheet" href="Portfolio.css">
     <script src="https://kit.fontawesome.com/1c274a141c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <!-------------------------------------------------------Header---------------------------------------------------------------------------------->
 
 <body>
-    <div id="header">
-        <div class="container">
+    <div id="loader-overlay">
+        <div class="loader-content">
+            <img src="./Images/Logo.png" alt="logo" class="loader-logo">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+    <div class="background-animated"></div>
+    <canvas class="particles-bg"></canvas>
+    <header class="simple-header fade-in-header">
+        <div class="header-content">
+            <img src="./Images/Logo.png" alt="logo" class="Logo">
             <nav>
-                <!------------------------------------Logo_Image--------------------------------------------------------------------------------->
-                <img src="./Images/Logo.png" alt="logo" class="Logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul class="simple-nav">
+                    <li><a href="#header" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills-section">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <!-------------------------------------------------------Header Text---------------------------------------------------------------------------------->
-            <div class="header-text">
-                <!--<p>
-                    Software Developer / Salesforce Marketing Cloud Developer / Machine Learning Engineer
-                </p> --->
-                <h1> Hi, I'm <span>Shanmukha</span></h1>
-
+        </div>
+    </header>
+    <div id="header" class="hero-section">
+        <div class="container hero-container">
+            <div class="header-text hero-animated">
+                <p>Salesforce Marketing Cloud Developer | Email Marketing Specialist</p>
+                <h1>Hi, I'm <span>Shanmukha Nalla</span></h1>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn">Get in Touch</a>
+                    <a href="C:/Users/shanm/OneDrive/Desktop/Email training/Shannu_portfolio/Images/Salesforce_Marketing_Cloud.pdf" download class="btn btn2">Download CV</a>
+                </div>
             </div>
         </div>
-        <!--------------------------------------------about---------------------------------------------------------------------->
     </div>
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./Images/1111.jpg">
+                    <img src="./Images/portfolio_image.jpeg" alt="Profile Picture" class="profile-img">
                 </div>
 
                 <div class="about-col-2">
-                    <h1 class="sub-title">About</h1>
-                    <p>
-                        I am a hard working student who is into technologies and science fields thanks for viewing my
-                        Portfolio
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-description">
+                        Experienced Salesforce Marketing Cloud Developer with 4 years of software development expertise, including almost 3 years specializing in Salesforce Marketing Cloud. Proven ability to enhance email campaign performance (25% higher open rate, 15% improved click-through rate), create user-specific Cloud Pages (30% engagement increase), and integrate APIs (40% data processing time reduction). Expertise in optimizing data extension management (50% database efficiency increase) and refining audience segmentation (35% conversion rate increase). Implemented AI-enhanced audience segmentation and predictive analytics in cross-cloud campaigns, driving a 20% increase in lead generation efficiency. Seeking a challenging role to leverage skills and contribute to innovative marketing solutions.
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li>
-                                <span>
-                                    Salesforce Marketing Cloud Developer
-                                </span>
-                                <br>
-                                Email development/ Automation Studio/ Journey builder / API Triggering
-
+                                <span>Salesforce Marketing Cloud</span>
+                                <br>Email Studio, Content Builder, Journey Builder, Automation Studio, Data Extensions, Segmentation, Cloud Pages
                             </li>
                             <li>
-                                <span>
-                                    Software Developer
-                                </span>
-                                <br>
-                                Web development / Backend development
-
+                                <span>Web Development</span>
+                                <br>HTML, CSS, JavaScript, NodeJS, AMPscript, Marketo, HubSpot, Pardot
                             </li>
                             <li>
-                                <span>
-                                    Machine Learning Engineer
-                                </span>
-                                <br>
-                                Data Analytics / Machine Learning
-
+                                <span>Data & Automation</span>
+                                <br>SQL, Server-Side JavaScript, Python, Java, REST/SOAP APIs
                             </li>
                         </ul>
                     </div>
 
-                    <div class="tab-contents" id="Experience">
+                    <div class="tab-contents" id="experience">
                         <ul>
                             <li>
-                                <span>
-                                    2024 - current
-                                </span>
-                                <br>
-                                Software Developer Intern at Radical AI
-
+                                <span>Sep 2024 – May 2025</span><br>
+                                <b>Web Developer, Marist University, Poughkeepsie, NY</b>
                             </li>
                             <li>
-                                <span>
-                                    2022 January - 2023 July
-                                </span>
-                                <br>
-                                Salesforce Marketing Cloud Developer/Data Analyst at Merkle.inc
-
+                                <span>Jun 2024 – Sep 2024</span><br>
+                                <b>Software Developer Intern, Radical AI, New York City, NY</b>
                             </li>
                             <li>
-                                <span>
-                                    2021
-                                </span>
-                                <br>
-                                Machine Learning Engineer - Verzeo
-
+                                <span>Jun 2022 – Jul 2023</span><br>
+                                <b>Salesforce Marketing Cloud Developer, Merkle, Bengaluru, India</b>
+                            </li>
+                            <li>
+                                <span>Jan 2022 – Jun 2022</span><br>
+                                <b>Salesforce Marketing Cloud Email Specialist, Merkle, Bengaluru, India</b>
+                            </li>
+                            <li>
+                                <span>Apr 2021 – Aug 2021</span><br>
+                                <b>Salesforce Marketing Cloud Intern, Verzeo, Bengaluru, India</b>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="tab-contents" id="Education">
+                    <div class="tab-contents" id="education">
                         <ul>
                             <li>
-                                <span>
-                                    2023 - 2025
-                                </span>
-                                <br>
-                                Master's in Computer Science at Marist College
-
+                                <span>2023 - 2025</span>
+                                <br>Master's in Computer Science at Marist College
                             </li>
                             <li>
-                                <span>
-                                    2018 - 2022
-                                </span>
-                                <br>
-                                Bachelor's degree at Indian Institute of Information Technology Design and Manufacturing
-                                Jabalpur
-
-                            </li>
-                            <li>
-                                <span>
-                                    2016 - 2018
-                                </span>
-                                <br>
-                                High School at Sasi Junior College
-
+                                <span>2018 - 2022</span>
+                                <br>Bachelor's degree at IIITDM Jabalpur
                             </li>
                         </ul>
                     </div>
@@ -148,103 +128,175 @@
         </div>
     </div>
     <!--------------------------------------------------------Service---------------------------------------------->
+    <div id="skills-section" class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-brands fa-salesforce"></i>
+                <h3>Salesforce Marketing Cloud</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 95%">95%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email Development</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 90%">90%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>SQL & Data Automation</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 85%">85%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-python"></i>
+                <h3>Python</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 80%">80%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 85%">85%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML/CSS</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 90%">90%</div></div>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-cloud"></i>
+                <h3>Cloud & APIs</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 80%">80%</div></div>
+            </div>
+        </div>
+    </div>
     <div id="services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
+            <div class="services-list" id="services-list">
+                <div class="service-card">
                     <i class="fa-brands fa-salesforce"></i>
                     <h2>Salesforce Marketing Cloud</h2>
-                    <p>You can explore my work across all these Salesforce Marketing Cloud components, including Journey Builder, Email Studio, Mobile Studio, and more, by checking out the detailed projects and case studies I've done</p>
-                    <a href="#">Learn more</a>
+                    <p>Expert in implementing and optimizing Salesforce Marketing Cloud solutions, including Journey Builder, Email Studio, and Automation Studio.</p>
                 </div>
-                <div>
+                <div class="service-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h2>Email Development</h2>
+                    <p>Creating responsive and dynamic email templates using HTML, CSS, and AMPscript for optimal deliverability and engagement.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>Marketing Automation</h2>
+                    <p>Designing and implementing automated marketing workflows to enhance customer engagement and campaign performance.</p>
+                </div>
+                <div class="service-card extra-service">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h2>Analytics</h2>
+                    <p>Data analytics and reporting using platforms like Datorama, Einstein for Marketing Cloud, and custom dashboards to drive actionable insights.</p>
+                </div>
+                <div class="service-card extra-service">
                     <i class="fa-solid fa-code"></i>
-                    <h2>Email development/ Web Design</h2>
-                    <p>For best rendering email and web design templates you can visit my website I will be adding all the templates
-                        which will be easy to use for all the professionals for their work.</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-database"></i>
-                    <h2>Data Analysis/ Automations</h2>
-                    <p>You can review my work in Data Analytics and Automation, showcasing my expertise in platforms like Datorama, Einstein for Marketing Cloud, and various automation tools, by visiting my portfolio here.</p>
-                    <a href="#">Learn more</a>
+                    <h2>Software Development</h2>
+                    <p>Full-stack web and backend development, API integrations, and scalable solutions using modern technologies and best practices.</p>
                 </div>
             </div>
-
+            <a href="#" class="btn see-more-btn" id="see-more-services" onclick="toggleServices(event)">See More</a>
         </div>
     </div>
     <!---------------------------------Portfolio Script--------------------------------->
-    <div id="Portfolio">
-        <div class="conatiner">
-            <h1 class="sub-title">My Work / Projects</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="./Images/Image1.jpg">
-                    <div class="layer">
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Featured Projects</h1>
+            <p class="section-desc">A selection of my recent web development, analytics, and programming projects.</p>
+            <div class="modern-projects-grid" id="modern-projects-grid">
+                <!-- Project 1 -->
+                <div class="modern-project-card">
+                    <img src="./Images/Image1.jpg" alt="Bus Transportation System">
+                    <div class="modern-project-content">
                         <h3>Bus Transportation System</h3>
-                        <p>The bus Transportation system helps the commuters in traveling from one place to another
-                            place</p>
-                        <a href="#">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
+                        <p>Real-time bus tracking and route optimization system for Dutchess County, enabling 100% operational accuracy for 100 buses. <br><b>Tech:</b> Python, MySQL</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>MySQL</span><span>Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="details-link">View Details →</a>
+                            <a href="#" class="source-link"><i class="fa-solid fa-code"></i> Source Code</a>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="./Images/Image2.jpg">
-                    <div class="layer">
+                <!-- Project 2 -->
+                <div class="modern-project-card">
+                    <img src="./Images/Image2.jpg" alt="Age Sign Detection">
+                    <div class="modern-project-content">
                         <h3>Age Sign Detection</h3>
-                        <p>I applied machine learning and image processing techniques to detect age signs by analyzing facial features and trained models to accurately estimate age ranges from images.</p>
-                        <a href="#">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
+                        <p>ML application for facial recognition and age estimation with 95% accuracy, processing 1000+ images/minute.<br><b>Tech:</b> Python, TensorFlow, OpenCV</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>TensorFlow</span><span>OpenCV</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="details-link">View Details →</a>
+                            <a href="#" class="source-link"><i class="fa-solid fa-code"></i> Source Code</a>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="./Images/Image3.jpg">
-                    <div class="layer">
-                        <h3>Dynamic Email Development/ Websites</h3>
-                        <p>I developed dynamic emails and websites using JavaScript and AMPscript, enabling personalized content delivery based on user behavior and real-time data, enhancing engagement and conversion rates.</p>
-                        <a href="#">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
+                <!-- Project 3 -->
+                <div class="modern-project-card">
+                    <img src="./Images/Image3.jpg" alt="Dynamic Email Development">
+                    <div class="modern-project-content">
+                        <h3>Dynamic Email Development</h3>
+                        <p>Personalized email campaigns and websites using JavaScript and AMPscript for real-time, user-based content.<br><b>Tech:</b> JavaScript, AMPscript, HTML/CSS</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span><span>AMPscript</span><span>HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="details-link">View Details →</a>
+                            <a href="#" class="source-link"><i class="fa-solid fa-code"></i> Source Code</a>
+                        </div>
                     </div>
                 </div>
-
+                <!-- Project 4 (hidden by default) -->
+                <div class="modern-project-card extra-project">
+                    <img src="./Images/contact_deletion.svg" alt="Contact Deletion Automation" style="background:#232526;object-fit:cover;height:210px;width:100%;">
+                    <div class="modern-project-content">
+                        <h3>Contact Deletion Automation</h3>
+                        <p>Automated one-click contact deletion in Salesforce Marketing Cloud using SSJS, increasing efficiency by 20% and reducing manual data management time by 75%.<br><b>Tech:</b> SSJS, Salesforce MC</p>
+                        <div class="project-tags">
+                            <span>SSJS</span><span>Salesforce MC</span><span>Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="details-link">View Details →</a>
+                            <a href="#" class="source-link"><i class="fa-solid fa-code"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="" class="btn">See More</a>
+            <a href="#" class="btn see-more-btn" id="see-more-projects" onclick="toggleProjectsGrid(event)">See More</a>
         </div>
     </div>
     <!------------------------------------Contact-------------------------------->
-    <div id=" contact">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>nshanmukha.c@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>8458910588</p>
+                    <p><i class="fas fa-paper-plane"></i> nshanmukha.c@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (845) 891-0588</p>
                     <div class="social-icons">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-
+                        <a href="https://www.linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://trailblazer.me/id/your-profile" target="_blank"><i class="fab fa-salesforce"></i></a>
                     </div>
-                    <a href="./Images/RESUME_2024 pdf.pdf" download class="btn btn2">Download Resume</a>
-
                 </div>
 
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <button type="submit" class="btn btn2">Send Message</button>
                     </form>
-
+                    <span id="msg"></span>
                 </div>
                 <div class="copyright">
-                    <p>Copyright @ Shanmukha.</p>
+                    <p>Copyright © 2024 Shanmukha Nalla. All rights reserved.</p>
                 </div>
 
             </div>
@@ -254,7 +306,7 @@
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-
+        
         function opentab(tabname) {
             for (tablink of tablinks) {
                 tablink.classList.remove("active-link")
@@ -265,6 +317,122 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+        function toggleServices(event) {
+            if (event) event.preventDefault();
+            const extraServices = document.querySelectorAll('.extra-service');
+            const btn = document.getElementById('see-more-services');
+            extraServices.forEach(s => s.classList.toggle('show'));
+            if (btn.innerText === 'See More') {
+                btn.innerText = 'See Less';
+            } else {
+                btn.innerText = 'See More';
+            }
+        }
+
+        function toggleProjectsGrid(event) {
+            if (event) event.preventDefault();
+            const extraProjects = document.querySelectorAll('.extra-project');
+            const btn = document.getElementById('see-more-projects');
+            extraProjects.forEach(p => p.classList.toggle('show'));
+            if (btn.innerText === 'See More') {
+                btn.innerText = 'See Less';
+            } else {
+                btn.innerText = 'See More';
+            }
+        }
+
+        // Animate skill bars when in view
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top < window.innerHeight && rect.bottom > 0
+            );
+        }
+        function animateSkills() {
+            const skillsGrid = document.querySelector('.skills-grid');
+            if (skillsGrid && isInViewport(skillsGrid)) {
+                skillsGrid.classList.add('in-view');
+                // Set bar widths for animation
+                document.querySelectorAll('.skill-level').forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.setProperty('--bar-width', width);
+                });
+                window.removeEventListener('scroll', animateSkills);
+            }
+        }
+        window.addEventListener('scroll', animateSkills);
+        window.addEventListener('DOMContentLoaded', animateSkills);
+
+        // Animated starfield background for .particles-bg
+        const canvas = document.querySelector('.particles-bg');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let w = window.innerWidth, h = window.innerHeight;
+            canvas.width = w; canvas.height = h;
+            window.addEventListener('resize', () => {
+                w = window.innerWidth; h = window.innerHeight;
+                canvas.width = w; canvas.height = h;
+            });
+            // Space warp starfield settings
+            const STAR_COUNT = 120;
+            const stars = Array.from({length: STAR_COUNT}, () => ({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                z: Math.random() * w,
+                r: 0.8 + Math.random() * 1.2,
+                speed: 1.2 + Math.random() * 1.8 // faster for warp effect
+            }));
+            function animateStars() {
+                ctx.clearRect(0, 0, w, h);
+                for (const s of stars) {
+                    // Move star
+                    s.z -= s.speed;
+                    if (s.z <= 1) {
+                        s.x = Math.random() * w;
+                        s.y = Math.random() * h;
+                        s.z = w;
+                    }
+                    // Project 3D to 2D
+                    const k = 128.0 / s.z;
+                    const px = (s.x - w/2) * k + w/2;
+                    const py = (s.y - h/2) * k + h/2;
+                    // Draw star streak for warp effect
+                    const prevK = 128.0 / (s.z + s.speed * 2);
+                    const prevPx = (s.x - w/2) * prevK + w/2;
+                    const prevPy = (s.y - h/2) * prevK + h/2;
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.strokeStyle = 'rgba(255,255,255,0.75)';
+                    ctx.lineWidth = s.r;
+                    ctx.moveTo(prevPx, prevPy);
+                    ctx.lineTo(px, py);
+                    ctx.shadowColor = '#fffbe6';
+                    ctx.shadowBlur = 8;
+                    ctx.stroke();
+                    ctx.restore();
+                }
+                ctx.shadowBlur = 0;
+                requestAnimationFrame(animateStars);
+            }
+            animateStars();
+        }
+
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader-overlay');
+            if (loader) {
+                loader.classList.add('fade-out');
+                setTimeout(() => loader.style.display = 'none', 800);
+            }
+        });
     </script>
 </body>
 
