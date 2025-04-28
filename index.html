@@ -28,7 +28,10 @@
     <header class="simple-header fade-in-header">
         <div class="header-content">
             <img src="./Images/Logo.png" alt="logo" class="Logo">
-            <nav>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+            </div>
+            <nav class="main-nav">
                 <ul class="simple-nav">
                     <li><a href="#header" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -432,6 +435,33 @@
                 loader.classList.add('fade-out');
                 setTimeout(() => loader.style.display = 'none', 800);
             }
+        });
+
+        function toggleMobileMenu() {
+            const nav = document.querySelector('.main-nav');
+            const toggle = document.querySelector('.mobile-menu-toggle span');
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('.main-nav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+                nav.classList.remove('active');
+                toggle.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.simple-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const nav = document.querySelector('.main-nav');
+                const toggle = document.querySelector('.mobile-menu-toggle span');
+                nav.classList.remove('active');
+                toggle.classList.remove('active');
+            });
         });
     </script>
 </body>
