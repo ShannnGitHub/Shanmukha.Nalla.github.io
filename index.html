@@ -43,9 +43,17 @@
             </nav>
         </div>
     </header>
+    <nav class="mobile-bottom-nav">
+        <a href="#header"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="#about"><i class="fas fa-user"></i><span>About</span></a>
+        <a href="#skills-section"><i class="fas fa-cogs"></i><span>Skills</span></a>
+        <a href="#services"><i class="fas fa-briefcase"></i><span>Services</span></a>
+        <a href="#portfolio"><i class="fas fa-th-large"></i><span>Projects</span></a>
+        <a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </nav>
     <div id="header" class="hero-section">
         <div class="container hero-container">
-            <div class="header-text hero-animated">
+            <div class="header-text hero-animated margin-100">
                 <p>Salesforce Marketing Cloud Developer | Email Marketing Specialist</p>
                 <h1>Hi, I'm <span>Shanmukha Nalla</span></h1>
                 <div class="cta-buttons">
@@ -321,14 +329,6 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-
         function toggleServices(event) {
             if (event) event.preventDefault();
             const extraServices = document.querySelectorAll('.extra-service');
@@ -439,30 +439,30 @@
 
         function toggleMobileMenu() {
             const nav = document.querySelector('.main-nav');
-            const toggle = document.querySelector('.mobile-menu-toggle span');
+            const toggle = document.querySelector('.mobile-menu-toggle');
             nav.classList.toggle('active');
             toggle.classList.toggle('active');
         }
-
         // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('.main-nav');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
-                nav.classList.remove('active');
-                toggle.classList.remove('active');
-            }
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.simple-nav a').forEach(link => {
-            link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            document.addEventListener('click', function(event) {
                 const nav = document.querySelector('.main-nav');
-                const toggle = document.querySelector('.mobile-menu-toggle span');
-                nav.classList.remove('active');
-                toggle.classList.remove('active');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+                    nav.classList.remove('active');
+                    toggle.classList.remove('active');
+                }
             });
-        });
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.simple-nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    const nav = document.querySelector('.main-nav');
+                    const toggle = document.querySelector('.mobile-menu-toggle');
+                    nav.classList.remove('active');
+                    toggle.classList.remove('active');
+                });
+            });
+        }
     </script>
 </body>
 
