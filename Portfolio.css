@@ -507,7 +507,7 @@ nav ul li a:hover::after {
 
 /* About Section */
 #about {
-    padding: 20px 0;
+    padding: 50px 0;
 }
 
 .row {
@@ -618,7 +618,7 @@ nav ul li a:hover::after {
 
 /* Services Section */
 #services {
-    padding: 30px 0 40px 0;
+    padding: 60px 0 40px 0;
     animation: sectionFadeIn 1.2s cubic-bezier(.77,0,.18,1) forwards;
 }
 
@@ -770,7 +770,7 @@ nav ul li a:hover::after {
 
 /* Portfolio Section */
 #portfolio {
-    padding: 30px 0;
+    padding: 60px 0;
     animation: sectionFadeIn 1.2s cubic-bezier(.77,0,.18,1) forwards;
 }
 
@@ -844,7 +844,7 @@ nav ul li a:hover::after {
 
 /* Contact Section */
 #contact {
-    padding: 20px 0;
+    padding: 50px 0;
     animation: sectionFadeIn 1.2s cubic-bezier(.77,0,.18,1) forwards;
 }
 
