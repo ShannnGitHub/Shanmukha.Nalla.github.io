@@ -19,15 +19,12 @@
 <body>
     <div id="loader-overlay">
         <div class="loader-content">
-            <img src="./Images/Logo.png" alt="logo" class="loader-logo">
             <div class="loader-spinner"></div>
         </div>
     </div>
     <div class="background-animated"></div>
-    <canvas class="particles-bg"></canvas>
     <header class="simple-header fade-in-header">
         <div class="header-content">
-            <img src="./Images/Logo.png" alt="logo" class="Logo">
             <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                 <span></span>
             </div>
@@ -35,7 +32,7 @@
                 <ul class="simple-nav">
                     <li><a href="#header" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#skills-section">Skills</a></li>
+                    <li><a href="#my-skills">Skills</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -46,7 +43,7 @@
     <nav class="mobile-bottom-nav">
         <a href="#header"><i class="fas fa-home"></i><span>Home</span></a>
         <a href="#about"><i class="fas fa-user"></i><span>About</span></a>
-        <a href="#skills-section"><i class="fas fa-cogs"></i><span>Skills</span></a>
+        <a href="#my-skills"><i class="fas fa-cogs"></i><span>Skills</span></a>
         <a href="#services"><i class="fas fa-briefcase"></i><span>Services</span></a>
         <a href="#portfolio"><i class="fas fa-th-large"></i><span>Projects</span></a>
         <a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
@@ -54,11 +51,10 @@
     <div id="header" class="hero-section">
         <div class="container hero-container">
             <div class="header-text hero-animated margin-100">
-                <p>Salesforce Marketing Cloud Developer | Email Marketing Specialist</p>
                 <h1>Hi, I'm <span>Shanmukha Nalla</span></h1>
+                <p>Salesforce Marketing Cloud Developer | Email Marketing Specialist</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn">Get in Touch</a>
-                    <a href="./Images/Salesforce_Marketing_Cloud.pdf" download class="btn btn2">Download CV</a>
+                    <a href="./Images/Shanmukha_Nalla_SFMC.pdf" class="btn btn2" download>Download CV</a>
                 </div>
             </div>
         </div>
@@ -67,31 +63,76 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./Images/portfolio_image.jpeg" alt="Profile Picture" class="profile-img">
+                    <img src="./Images/portfolio_image.png" alt="Profile Picture" class="profile-img">
+                    <div class="profile-badges">
+                        <div class="badge">
+                            <i class="fas fa-code"></i>
+                            <span>4+ Years Dev</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fab fa-salesforce"></i>
+                            <span>SFMC Expert</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-envelope"></i>
+                            <span>Personal Branding Email Expert</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p class="about-description">
-                        Experienced Salesforce Marketing Cloud Developer with 4 years of software development expertise, including almost 3 years specializing in Salesforce Marketing Cloud. Proven ability to enhance email campaign performance (25% higher open rate, 15% improved click-through rate), create user-specific Cloud Pages (30% engagement increase), and integrate APIs (40% data processing time reduction). Expertise in optimizing data extension management (50% database efficiency increase) and refining audience segmentation (35% conversion rate increase). Implemented AI-enhanced audience segmentation and predictive analytics in cross-cloud campaigns, driving a 20% increase in lead generation efficiency. Seeking a challenging role to leverage skills and contribute to innovative marketing solutions.
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <div class="about-content">
+                        <p class="about-intro">
+                            Hi there! I'm a passionate Salesforce Marketing Cloud Developer with a knack for creating impactful digital experiences. 
+                        </p>
+                        <div class="achievement-cards">
+                            <div class="achievement-card">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Email Performance</h3>
+                                
+                            </div>
+                            <div class="achievement-card">
+                                <i class="fas fa-users"></i>
+                                <h3>User Engagement</h3>
+                            </div>
+                            <div class="achievement-card">
+                                <i class="fas fa-database"></i>
+                                <h3>Technical Impact</h3>
+                            </div>
+                        </div>
+                        <p class="about-description">
+                            With 4 years of software development expertise and 3 years specializing in Salesforce Marketing Cloud, I've consistently delivered solutions that drive results. My expertise spans from crafting engaging email campaigns to implementing AI-enhanced audience segmentation, always focusing on measurable improvements in performance and user engagement.
+                        </p>
                     </div>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            <i class="fas fa-tools"></i>
+                            <span>Skills</span>
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Experience</span>
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </p>
+                    </div>
+                    
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li>
-                                <span>Salesforce Marketing Cloud</span>
+                                <span><i class="fab fa-salesforce"></i> Salesforce Marketing Cloud</span>
                                 <br>Email Studio, Content Builder, Journey Builder, Automation Studio, Data Extensions, Segmentation, Cloud Pages
                             </li>
                             <li>
-                                <span>Web Development</span>
+                                <span><i class="fas fa-code"></i> Web Development</span>
                                 <br>HTML, CSS, JavaScript, NodeJS, AMPscript, Marketo, HubSpot, Pardot
                             </li>
                             <li>
-                                <span>Data & Automation</span>
+                                <span><i class="fas fa-database"></i> Data & Automation</span>
                                 <br>SQL, Server-Side JavaScript, Python, Java, REST/SOAP APIs
                             </li>
                         </ul>
@@ -100,24 +141,29 @@
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li>
-                                <span>Sep 2024 – May 2025</span><br>
-                                <b>Web Developer, Marist University, Poughkeepsie, NY</b>
+                                <span><i class="fas fa-calendar"></i> Sep 2024 – May 2025</span>
+                                <br><b>Web Developer</b>
+                                <br>Marist University, Poughkeepsie, NY
                             </li>
                             <li>
-                                <span>Jun 2024 – Sep 2024</span><br>
-                                <b>Software Developer Intern, Radical AI, New York City, NY</b>
+                                <span><i class="fas fa-calendar"></i> Jun 2024 – Sep 2024</span>
+                                <br><b>Software Developer Intern</b>
+                                <br>Radical AI, New York City, NY
                             </li>
                             <li>
-                                <span>Jun 2022 – Jul 2023</span><br>
-                                <b>Salesforce Marketing Cloud Developer, Merkle, Bengaluru, India</b>
+                                <span><i class="fas fa-calendar"></i> Jun 2022 – Jul 2023</span>
+                                <br><b>Salesforce Marketing Cloud Developer</b>
+                                <br>Merkle, Bengaluru, India
                             </li>
                             <li>
-                                <span>Jan 2022 – Jun 2022</span><br>
-                                <b>Salesforce Marketing Cloud Email Specialist, Merkle, Bengaluru, India</b>
+                                <span><i class="fas fa-calendar"></i> Jan 2022 – Jun 2022</span>
+                                <br><b>Salesforce Marketing Cloud Email Specialist</b>
+                                <br>Merkle, Bengaluru, India
                             </li>
                             <li>
-                                <span>Apr 2021 – Aug 2021</span><br>
-                                <b>Salesforce Marketing Cloud Intern, Verzeo, Bengaluru, India</b>
+                                <span><i class="fas fa-calendar"></i> Apr 2021 – Aug 2021</span>
+                                <br><b>Salesforce Marketing Cloud Intern</b>
+                                <br>Verzeo, Bengaluru, India
                             </li>
                         </ul>
                     </div>
@@ -125,12 +171,14 @@
                     <div class="tab-contents" id="education">
                         <ul>
                             <li>
-                                <span>2023 - 2025</span>
-                                <br>Master's in Computer Science at Marist College
+                                <span><i class="fas fa-graduation-cap"></i> 2023 - 2025</span>
+                                <br><b>Master's in Computer Science</b>
+                                <br>Marist College
                             </li>
                             <li>
-                                <span>2018 - 2022</span>
-                                <br>Bachelor's degree at IIITDM Jabalpur
+                                <span><i class="fas fa-graduation-cap"></i> 2018 - 2022</span>
+                                <br><b>Bachelor's degree</b>
+                                <br>IIITDM Jabalpur
                             </li>
                         </ul>
                     </div>
@@ -139,7 +187,7 @@
         </div>
     </div>
     <!--------------------------------------------------------Service---------------------------------------------->
-    <div id="skills-section" class="container">
+    <div id="my-skills" class="container">
         <h1 class="sub-title">My Skills</h1>
         <div class="skills-categories">
             <div class="category active" data-category="marketing">Marketing Cloud</div>
@@ -303,37 +351,37 @@
                 <div class="service-card">
                     <i class="fa-brands fa-salesforce"></i>
                     <h2>Salesforce Marketing Cloud</h2>
-                    <p>Expert in implementing and optimizing Salesforce Marketing Cloud solutions, including Journey Builder, Email Studio, and Automation Studio.</p>
+                    <p>Expert implementation and optimization of SFMC solutions, including Journey Builder, Email Studio, and Automation Studio. Proven track record of increasing campaign performance by 40%.</p>
                 </div>
                 <div class="service-card">
                     <i class="fa-solid fa-envelope"></i>
                     <h2>Email Development</h2>
-                    <p>Creating responsive and dynamic email templates using HTML, CSS, and AMPscript for optimal deliverability and engagement.</p>
+                    <p>Creation of responsive and dynamic email templates using HTML, CSS, and AMPscript. Specialized in personalization that drives 25% higher engagement rates.</p>
                 </div>
                 <div class="service-card">
                     <i class="fa-solid fa-robot"></i>
                     <h2>Marketing Automation</h2>
-                    <p>Designing and implementing automated marketing workflows to enhance customer engagement and campaign performance.</p>
+                    <p>Design and implementation of automated marketing workflows that enhance customer engagement. Successfully reduced campaign setup time by 60% while improving targeting accuracy.</p>
                 </div>
                 <div class="service-card extra-service">
                     <i class="fa-solid fa-chart-line"></i>
-                    <h2>Analytics</h2>
-                    <p>Data analytics and reporting using platforms like Datorama, Einstein for Marketing Cloud, and custom dashboards to drive actionable insights.</p>
+                    <h2>Analytics & Reporting</h2>
+                    <p>Advanced data analytics and reporting using Datorama, Einstein Analytics, and custom dashboards. Delivering actionable insights that drive strategic decisions.</p>
                 </div>
                 <div class="service-card extra-service">
                     <i class="fa-solid fa-code"></i>
-                    <h2>Software Development</h2>
-                    <p>Full-stack web and backend development, API integrations, and scalable solutions using modern technologies and best practices.</p>
+                    <h2>Custom Development</h2>
+                    <p>Full-stack development and API integrations using modern technologies. Building scalable solutions that connect marketing platforms with business systems.</p>
                 </div>
             </div>
-            <a href="#" class="btn see-more-btn" id="see-more-services" onclick="toggleServices(event)">See More</a>
+            <a href="#" class="see-more-btn" id="see-more-services" onclick="toggleServices(event)">See More</a>
         </div>
     </div>
     <!---------------------------------Portfolio Script--------------------------------->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">Featured Projects</h1>
-            <p class="section-desc">A selection of my recent web development, analytics, and programming projects.</p>
+            <h1 class="sub-title">My Projects</h1>
+
             <div class="modern-projects-grid" id="modern-projects-grid">
                 <!-- Project 1 -->
                 <div class="modern-project-card">
@@ -370,7 +418,7 @@
                 </div>
                 <!-- Project 4 (hidden by default) -->
                 <div class="modern-project-card extra-project">
-                    <img src="./Images/contact_deletion.svg" alt="Contact Deletion Automation" style="background:#232526;object-fit:cover;height:210px;width:100%;">
+                    <img src="./Images/contact_deletion.svg" alt="Contact Deletion Automation">
                     <div class="modern-project-content">
                         <h3>Contact Deletion Automation</h3>
                         <p>Automated one-click contact deletion in Salesforce Marketing Cloud using SSJS, increasing efficiency by 20% and reducing manual data management time by 75%.<br><b>Tech:</b> SSJS, Salesforce MC</p>
@@ -390,7 +438,6 @@
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fas fa-paper-plane"></i> nshanmukha.c@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +1 (845) 891-0588</p>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/shanmukha-nalla/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/ShannnGitHub" target="_blank"><i class="fab fa-github"></i></a>
@@ -475,60 +522,6 @@
         }
         window.addEventListener('scroll', animateSkills);
         window.addEventListener('DOMContentLoaded', animateSkills);
-
-        // Animated starfield background for .particles-bg
-        const canvas = document.querySelector('.particles-bg');
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            let w = window.innerWidth, h = window.innerHeight;
-            canvas.width = w; canvas.height = h;
-            window.addEventListener('resize', () => {
-                w = window.innerWidth; h = window.innerHeight;
-                canvas.width = w; canvas.height = h;
-            });
-            // Space warp starfield settings
-            const STAR_COUNT = 120;
-            const stars = Array.from({length: STAR_COUNT}, () => ({
-                x: Math.random() * w,
-                y: Math.random() * h,
-                z: Math.random() * w,
-                r: 0.8 + Math.random() * 1.2,
-                speed: 1.2 + Math.random() * 1.8 // faster for warp effect
-            }));
-            function animateStars() {
-                ctx.clearRect(0, 0, w, h);
-                for (const s of stars) {
-                    // Move star
-                    s.z -= s.speed;
-                    if (s.z <= 1) {
-                        s.x = Math.random() * w;
-                        s.y = Math.random() * h;
-                        s.z = w;
-                    }
-                    // Project 3D to 2D
-                    const k = 128.0 / s.z;
-                    const px = (s.x - w/2) * k + w/2;
-                    const py = (s.y - h/2) * k + h/2;
-                    // Draw star streak for warp effect
-                    const prevK = 128.0 / (s.z + s.speed * 2);
-                    const prevPx = (s.x - w/2) * prevK + w/2;
-                    const prevPy = (s.y - h/2) * prevK + h/2;
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.strokeStyle = 'rgba(255,255,255,0.75)';
-                    ctx.lineWidth = s.r;
-                    ctx.moveTo(prevPx, prevPy);
-                    ctx.lineTo(px, py);
-                    ctx.shadowColor = '#fffbe6';
-                    ctx.shadowBlur = 8;
-                    ctx.stroke();
-                    ctx.restore();
-                }
-                ctx.shadowBlur = 0;
-                requestAnimationFrame(animateStars);
-            }
-            animateStars();
-        }
 
         window.addEventListener('load', function() {
             const loader = document.getElementById('loader-overlay');
