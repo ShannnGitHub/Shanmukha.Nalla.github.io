@@ -13,6 +13,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        emailjs.init("sNi2E5uKl-NwD6oGu");
+        
+        // Function to send email
+        function sendEmail(e) {
+            e.preventDefault();
+            
+            const msg = document.getElementById('msg');
+            msg.textContent = 'Sending your message...';
+            msg.style.color = '#3b82f6';
+            msg.style.fontWeight = 'bold';
+            msg.style.padding = '10px';
+            msg.style.margin = '10px 0';
+            msg.style.borderRadius = '5px';
+            msg.style.backgroundColor = '#f0f9ff';
+
+            // Get form data
+            const formData = {
+                from_name: document.querySelector('[name="from_name"]').value,
+                from_email: document.querySelector('[name="from_email"]').value,
+                message: document.querySelector('[name="message"]').value,
+                to_email: 'nshanmukha.c@gmail.com'
+            };
+
+            // Send email using EmailJS
+            emailjs.send('service_8q1agpa', 'template_0jjc123', formData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    msg.textContent = '✅ Message sent successfully! Thank you for contacting me.';
+                    msg.style.color = '#10b981';
+                    msg.style.backgroundColor = '#f0fdf4';
+                    msg.style.border = '1px solid #10b981';
+                    document.getElementById('contact-form').reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        msg.textContent = '';
+                        msg.style.backgroundColor = 'transparent';
+                        msg.style.border = 'none';
+                    }, 5000);
+                })
+                .catch(function(error) {
+                    console.log('FAILED...', error);
+                    msg.textContent = '❌ Error: ' + error.text;
+                    msg.style.color = '#ef4444';
+                    msg.style.backgroundColor = '#fef2f2';
+                    msg.style.border = '1px solid #ef4444';
+                });
+        }
+
+        // Add event listener to form
+        document.getElementById('contact-form').addEventListener('submit', sendEmail);
+    </script>
 </head>
 <!-------------------------------------------------------Header---------------------------------------------------------------------------------->
 
@@ -52,7 +107,7 @@
         <div class="container hero-container">
             <div class="header-text hero-animated margin-100">
                 <h1>Hi, I'm <span>Shanmukha Nalla</span></h1>
-                <p>Salesforce Marketing Cloud Developer | Email Marketing Specialist</p>
+                <p>Software Developer| Data Analyst | Email Marketing Specialist</p>
                 <div class="cta-buttons">
                     <a href="./Images/Shanmukha_Nalla_SFMC.pdf" class="btn btn2" download>Download CV</a>
                 </div>
@@ -84,7 +139,7 @@
                     <h1 class="sub-title">About Me</h1>
                     <div class="about-content">
                         <p class="about-intro">
-                            Hi there! I'm a passionate Salesforce Marketing Cloud Developer with a knack for creating impactful digital experiences. 
+                            Hi there! I'm a passionate Software Developer with a knack for creating impactful digital experiences. 
                         </p>
                         <div class="achievement-cards">
                             <div class="achievement-card">
@@ -446,11 +501,12 @@
                 </div>
 
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn2">Send Message</button>
+                    <form id="contact-form" name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Send</button>
                     </form>
                     <span id="msg"></span>
                 </div>
@@ -578,7 +634,41 @@
                 });
             });
         });
+
+        // Form submission handling
+        const form = document.querySelector('form');
+        const msg = document.getElementById('msg');
+
+        form.addEventListener('submit', function(e) {
+            // Show sending message
+            msg.textContent = 'Sending your message...';
+            msg.style.color = '#3b82f6';
+            msg.style.fontWeight = 'bold';
+            msg.style.padding = '10px';
+            msg.style.margin = '10px 0';
+            msg.style.borderRadius = '5px';
+            msg.style.backgroundColor = '#f0f9ff';
+        });
+
+        // Handle form submission success
+        form.addEventListener('submit', function(e) {
+            setTimeout(() => {
+                msg.textContent = '✅ Message sent successfully! Thank you for contacting me.';
+                msg.style.color = '#10b981';
+                msg.style.backgroundColor = '#f0fdf4';
+                msg.style.border = '1px solid #10b981';
+                form.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    msg.textContent = '';
+                    msg.style.backgroundColor = 'transparent';
+                    msg.style.border = 'none';
+                }, 5000);
+            }, 1000);
+        });
     </script>
+    <script src="chatbot.js"></script>
 </body>
 
 </html>
