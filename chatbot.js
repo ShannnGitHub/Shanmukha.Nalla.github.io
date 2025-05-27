@@ -16,7 +16,8 @@ const chatbotConfig = {
                   "His projects showcase his skills in Python, Machine Learning, and Email Marketing."],
         contact: ["You can reach Shanmukha at nshanmukha.c@gmail.com",
                  "Connect with him on LinkedIn: https://www.linkedin.com/in/shanmukha-nalla/",
-                 "Check out his GitHub: https://github.com/ShannnGitHub"],
+                 "Check out his GitHub: https://github.com/ShannnGitHub",
+                 ],
         default: ["I'm not sure I understand. Could you rephrase that?",
                  "I'm still learning! Try asking about Shanmukha's skills, projects, or experience.",
                  "Let me help you better. You can ask about skills, projects, or how to contact Shanmukha."]
